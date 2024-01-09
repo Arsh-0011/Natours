@@ -1,0 +1,115 @@
+.section-tour__card {
+    height: 40rem;
+    width: 25rem;
+    position: relative;
+    perspective: 1500;
+
+    &:hover .tour-card__front-1 {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .tour-card__back-1 {
+        transform: rotateY(0deg);
+    }
+
+    &:hover .tour-card__front-2 {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .tour-card__back-2 {
+        transform: rotateY(0deg);
+    }
+
+    &:hover .tour-card__front-3 {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .tour-card__back-3 {
+        transform: rotateY(0deg);
+    }
+}
+
+.tour-card {
+    height: 40rem;
+    width: 25rem;
+    transition: all 1s;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.75);
+
+    &__back {
+        transform: rotateY(-180deg);
+        &-1 {
+            background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 104, 107) 0%, rgb(255, 187, 103) 90.1%);
+        }
+        &-2{
+            background: linear-gradient(117.5deg, rgb(89, 233, 162) 20.5%, rgb(29, 209, 185) 100.2%);
+        }
+        &-3{
+            background: radial-gradient(465px at -15.1% -25%, rgb(17, 130, 193) 0%, rgb(67, 166, 238) 49%, rgb(126, 203, 244) 90.2%);
+        }
+    }
+
+    &__image {
+        background-size: cover;
+        height: 15rem;
+        background-blend-mode: screen;
+        -webkit-background-blend-mode: screen;
+        &-1 {
+            background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 104, 107) 0%, rgb(255, 187, 103) 90.1%), url('../img/nat-5.jpg');
+        }
+
+        &-2 {
+            background-image: linear-gradient(117.5deg, rgb(89, 233, 162) 20.5%, rgb(29, 209, 185) 100.2%),url('../img/nat-6.jpg');
+        }
+
+        &-3 {
+            background-image: radial-gradient(465px at -15.1% -25%, rgb(17, 130, 193) 0%, rgb(67, 166, 238) 49%, rgb(126, 203, 244) 90.2%),url('../img/nat-7.jpg');
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: .5rem;
+        color: white;
+        position: absolute;
+        top: 8rem;
+        left: 10rem;
+        &-1{
+            background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 104, 107) 0%, rgb(255, 187, 103) 90.1%);
+
+        }
+        &-2{
+            background: linear-gradient(117.5deg, rgb(89, 233, 162) 20.5%, rgb(29, 209, 185) 100.2%);
+    
+        }
+        &-3{
+            background: radial-gradient(465px at -15.1% -25%, rgb(17, 130, 193) 0%, rgb(67, 166, 238) 49%, rgb(126, 203, 244) 90.2%);
+        
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__details {
+        margin-top: 4rem;
+        text-decoration: none;
+        text-align: center;
+        width: 70%;
+
+        &>li {
+            list-style-type: none;
+            padding: .5rem;
+        }
+        & :not(:last-child){
+            border-bottom: solid .1px #0000002e;
+        }
+    }
+
+}
