@@ -19,6 +19,14 @@ Dark green: #28b485
   padding: 20rem;
 }
 
+.section-stories {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0rem;
+}
+
 .heading {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -184,6 +192,72 @@ Dark green: #28b485
 .tour-row {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+
+.story {
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  transform: skewX(-10deg);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 3rem 2rem;
+  box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.35);
+}
+.story-image {
+  height: 15rem;
+  clip-path: circle(39%);
+  transform: skewX(10deg);
+}
+.story-image__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.story-text {
+  transform: skewX(10deg);
+}
+.story-detail {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.story-name {
+  position: absolute;
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  transform: skewX(10deg);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.5s ease-in;
+}
+.story-heading {
+  text-transform: uppercase;
+  color: rgba(60, 59, 59, 0.991);
+}
+.story:hover .story-name {
+  opacity: 1;
+}
+.story:hover .story-image {
+  filter: blur(5px);
+}
+
+.video-container {
+  position: absolute;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video {
+  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 
@@ -421,6 +495,10 @@ body {
 
 .u-m-top-small {
   margin-top: 2rem;
+}
+
+.u-color-primary-dark {
+  color: #28b485;
 }
 
 /*# sourceMappingURL=style.css.map */

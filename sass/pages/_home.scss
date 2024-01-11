@@ -10,3 +10,12 @@
 .section-tours{
     padding: 20rem;
 }
+
+.section-stories{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 0rem;
+    // z-index: -2;
+}

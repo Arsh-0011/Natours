@@ -1,0 +1,67 @@
+.story{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    transform: skewX(-10deg);
+    background-color: rgba($color-white,0.7) ;
+    padding: 3rem 2rem;
+    box-shadow: $standard-box-shadow;
+    &-image{
+        height: 15rem;
+        clip-path: circle(39%);
+        transform: skewX(10deg);
+        &__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-text{
+        transform: skewX(10deg);
+    }
+    &-detail{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+    &-name{
+        position: absolute;
+        opacity: 0;
+        color: $color-white;
+        transform: skewX(10deg);
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: all .5s ease-in;
+    }
+    &-heading{
+        text-transform: uppercase;
+        color: $color-grey;
+    }
+
+    &:hover &-name{
+        opacity: 1;
+    }
+    &:hover &-image{
+        filter: blur(5px);
+    }
+}
+
+
+.video-container{
+    position: absolute;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.video{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
