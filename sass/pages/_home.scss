@@ -19,3 +19,11 @@
     padding: 10rem 0rem;
     // z-index: -2;
 }
+
+.section-booking{
+    background-image: linear-gradient(to right bottom, rgba($color-medium, 0.8), rgba($color-dark, 0.8));
+    padding: 20rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

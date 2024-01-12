@@ -10,10 +10,10 @@ Dark green: #28b485
 
 @import 'abstracts/functions' ,'abstracts/mixins','abstracts/variables';
 @import  'pages/home';
-@import 'layouts/header','layouts/about','layouts/feature','layouts/tours','layouts/stories';
+@import 'layouts/header','layouts/about','layouts/feature','layouts/tours','layouts/stories','layouts/booking';
 
 
-@import 'components/button' , 'components/featureCard','components/tourCard'; 
+@import 'components/button' , 'components/featureCard','components/tourCard','components/bookingCard'; 
 @import 'base/animation','base/base','base/typography','base/utilities';
 
 
