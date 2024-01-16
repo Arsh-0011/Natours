@@ -8,7 +8,7 @@ Dark green: #28b485
 */
 .feature {
   padding: 20rem 10rem;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/Nat-4.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(37, 163, 121, 0.8)), url("../img/Nat-4.jpg");
   background-size: cover;
   background-position: top;
   transform: skewY(-5deg);
@@ -28,8 +28,8 @@ Dark green: #28b485
 }
 
 .section-booking {
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8));
-  padding: 20rem 0rem;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(37, 163, 121, 0.8));
+  padding: 10rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@ Dark green: #28b485
 
 .heading {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(37, 163, 121, 0.8)), url("../img/hero.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
@@ -100,7 +100,7 @@ Dark green: #28b485
 
 .heading-secondary {
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f 20%, #28b485 80%);
+  background-image: linear-gradient(to right, #7ed56f 20%, #25a379 80%);
   color: transparent;
   -webkit-background-clip: text;
   text-transform: uppercase;
@@ -282,8 +282,9 @@ Dark green: #28b485
   display: inline-block;
   padding: 1rem 3rem;
   border-radius: 10rem;
+  border: none;
   text-decoration: none;
-  box-shadow: 0px 20px 43px -12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.35);
 }
 
 .btn-white {
@@ -292,7 +293,7 @@ Dark green: #28b485
 }
 
 .btn-primary {
-  background-color: #28b485;
+  background-color: #25a379;
   color: rgb(255, 255, 255);
 }
 
@@ -360,7 +361,7 @@ Dark green: #28b485
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%);
 }
 .tour-card__back-2 {
-  background: linear-gradient(117.5deg, #7ed56f 20.5%, #28b485 100.2%);
+  background: linear-gradient(117.5deg, #7ed56f 20.5%, #25a379 100.2%);
 }
 .tour-card__back-3 {
   background: radial-gradient(465px at -15.1% -25%, rgb(67, 166, 238) 0%, rgb(17, 130, 193) 49%, rgb(126, 203, 244) 90.2%);
@@ -375,7 +376,7 @@ Dark green: #28b485
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%), url("../img/nat-5.jpg");
 }
 .tour-card__image-2 {
-  background-image: linear-gradient(117.5deg, #7ed56f 20.5%, #28b485 100.2%), url("../img/nat-6.jpg");
+  background-image: linear-gradient(117.5deg, #7ed56f 20.5%, #25a379 100.2%), url("../img/nat-6.jpg");
 }
 .tour-card__image-3 {
   background-image: radial-gradient(465px at -15.1% -25%, rgb(67, 166, 238) 0%, rgb(17, 130, 193) 49%, rgb(126, 203, 244) 90.2%), url("../img/nat-7.jpg");
@@ -394,7 +395,7 @@ Dark green: #28b485
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%);
 }
 .tour-card__heading-2 {
-  background: linear-gradient(117.5deg, #7ed56f 20.5%, #28b485 100.2%);
+  background: linear-gradient(117.5deg, #7ed56f 20.5%, #25a379 100.2%);
 }
 .tour-card__heading-3 {
   background: radial-gradient(465px at -15.1% -25%, rgb(17, 130, 193) 0%, rgb(67, 166, 238) 49%, rgb(126, 203, 244) 90.2%);
@@ -435,8 +436,23 @@ Dark green: #28b485
   font-weight: 300;
 }
 
+.form {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
 .form > :not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+.form-input__group {
+  width: 100%;
+}
+.form-input__group-radio {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 .form-input {
   display: block;
@@ -444,17 +460,21 @@ Dark green: #28b485
   border: 0px;
   font-size: 1.4rem;
   border-bottom: 4px solid transparent;
-  width: 40%;
+  border-radius: 5px;
+  width: 90%;
 }
 .form-input:focus {
   outline: none;
-  border-bottom: 4px solid #28b485;
+  border-bottom: 4px solid #25a379;
 }
 .form-input:not(:placeholder-shown) + .form-input__label {
   opacity: 1;
   visibility: visible;
   top: 0rem;
   left: 1rem;
+}
+.form-input:focus:invalid {
+  border-bottom: 4px solid orangered;
 }
 .form-input__label {
   font-size: 1.2rem;
@@ -465,8 +485,28 @@ Dark green: #28b485
   left: 1rem;
   transition: all 0.1s ease-in;
 }
-.form-input:focus:invalid {
-  border-bottom: 4px solid orangered;
+.form-input__radio-group:last-child {
+  margin-left: 1.5rem;
+}
+.form-input__radio-group {
+  display: flex;
+}
+.form-radio {
+  display: none;
+}
+.form-input-radio__button::after {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  outline: solid 4px #25a379;
+  outline-offset: 2px;
+  border-radius: 50px;
+  display: inline-block;
+  outline-offset: 2px;
+  margin-right: 1rem;
+}
+.form-radio:checked ~ .form-input__radio .form-input-radio__button::after {
+  background-color: #25a379;
 }
 
 @keyframes moveInRight {
@@ -546,7 +586,7 @@ body {
 }
 
 .u-color-primary-dark {
-  color: #28b485;
+  color: #25a379;
 }
 
 /*# sourceMappingURL=style.css.map */

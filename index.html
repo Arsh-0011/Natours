@@ -48,7 +48,7 @@
                 <img class="composition__photo composition__photo-3" src="./img/nat-3-large.jpg" alt="">
             </div>
         </div>
-    </main>
+    
     <section class="feature">
         <div class="col-1-of-4">
             <div class="feature-block">
@@ -208,9 +208,27 @@
                     <input id="email" type="email" class="form-input" placeholder="Email" required>
                     <label for="email" class="form-input__label">Email</label>
                 </div>
+                <div class="form-input__group form-input__group-radio">
+                    <div class="form-input__radio-group">
+                        <input id="small" type="radio" class="form-radio" required name="radio">
+                        <label for="small" class="form-input__radio">
+                            <span class="form-input-radio__button"></span>
+                            Small tour group
+                        </label>
+                    </div>
+                    <div class="form-input__radio-group">
+                        <input id="large" type="radio" class="form-radio" required name="radio">
+                        <label for="large" class="form-input__radio">
+                            <span class="form-input-radio__button"></span>
+                            Large tour group
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn-primary u-m-top-small">Next</button>
             </form>
         </div>        
     </section>
+</main>
 </body>
 
 </html>
