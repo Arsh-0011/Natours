@@ -1,0 +1,54 @@
+.navigation{
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    &__container{
+        top: 5rem;
+        right: 5rem;
+        position: fixed;
+        height: 6rem;
+        width: 6rem;
+        background-color: white;
+        border-radius: 45px;
+    }
+    &__background{
+        top: 5.5rem;
+        right: 5.5rem;
+        position: fixed;
+        height: 5rem;
+        width: 5rem;
+        background-image: radial-gradient($color-light,$color-dark);
+        border-radius: 45px;
+        transform: scale(55);
+        z-index: 100;
+    }
+}
+.nav{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    &__item{
+            list-style: none;
+            text-transform: uppercase;
+            // font-style: none;
+            text-decoration: none;
+            padding: 1rem;
+            color: white;
+
+            & > a{
+                &:link,
+                &:visited{
+                    text-transform: uppercase;
+            // font-style: none;
+                    text-decoration: none;
+                    padding: 1rem;
+                    color: white;
+                    font-weight: 400;
+                }
+            }
+    }
+}

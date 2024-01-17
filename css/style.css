@@ -25,6 +25,7 @@ Dark green: #28b485
   flex-direction: column;
   align-items: center;
   padding: 10rem 0rem;
+  background-color: transparent;
 }
 
 .section-booking {
@@ -33,6 +34,62 @@ Dark green: #28b485
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.footer {
+  background-color: rgb(78, 78, 78);
+  padding: 8rem 0rem;
+  color: rgb(255, 255, 255);
+}
+
+.navigation {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+}
+.navigation__container {
+  top: 5rem;
+  right: 5rem;
+  position: fixed;
+  height: 6rem;
+  width: 6rem;
+  background-color: white;
+  border-radius: 45px;
+}
+.navigation__background {
+  top: 5.5rem;
+  right: 5.5rem;
+  position: fixed;
+  height: 5rem;
+  width: 5rem;
+  background-image: radial-gradient(#7ed56f, #25a379);
+  border-radius: 45px;
+  transform: scale(55);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+.nav__item {
+  list-style: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  color: white;
+}
+.nav__item > a:link, .nav__item > a:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  color: white;
+  font-weight: 400;
 }
 
 .heading {
@@ -202,6 +259,10 @@ Dark green: #28b485
   width: 100%;
 }
 
+.section-stories__heading {
+  z-index: 2;
+}
+
 .story {
   display: flex;
   width: 60%;
@@ -253,10 +314,9 @@ Dark green: #28b485
 
 .video-container {
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.7;
   top: 0;
   left: 0;
-  z-index: -1;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -273,6 +333,37 @@ Dark green: #28b485
   padding: 5rem 5rem;
   width: 70%;
   background-size: cover;
+}
+
+.footer__logo {
+  width: 10rem;
+  margin: 0rem auto;
+}
+.footer__logo-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.footer__info {
+  display: flex;
+}
+
+.info__links {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+.info__links > * {
+  list-style: none;
+}
+.info__links > *:hover {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.info__copyright {
+  width: 50%;
+  font-size: 1.2rem;
 }
 
 .btn {
