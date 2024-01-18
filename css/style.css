@@ -42,12 +42,6 @@ Dark green: #28b485
   color: rgb(255, 255, 255);
 }
 
-.navigation {
-  position: fixed;
-  z-index: 1000;
-  height: 100vh;
-  width: 100%;
-}
 .navigation__container {
   top: 5rem;
   right: 5rem;
@@ -56,8 +50,9 @@ Dark green: #28b485
   width: 6rem;
   background-color: white;
   border-radius: 45px;
+  z-index: 200;
 }
-.navigation__background {
+.navigation__container__background {
   top: 5.5rem;
   right: 5.5rem;
   position: fixed;
@@ -66,16 +61,20 @@ Dark green: #28b485
   background-image: radial-gradient(#7ed56f, #25a379);
   border-radius: 45px;
   transform: scale(55);
-  z-index: 100;
+  z-index: 50;
+  visibility: hidden;
 }
 
 .nav {
   display: flex;
   height: 100%;
+  width: 100%;
   flex-direction: column;
+  position: fixed;
   align-items: center;
   justify-content: center;
-  z-index: 1500;
+  z-index: 150;
+  visibility: hidden;
 }
 .nav__item {
   list-style: none;
@@ -83,6 +82,7 @@ Dark green: #28b485
   text-decoration: none;
   padding: 1rem;
   color: white;
+  font-size: 2.4rem;
 }
 .nav__item > a:link, .nav__item > a:visited {
   text-transform: uppercase;
@@ -90,6 +90,11 @@ Dark green: #28b485
   padding: 1rem;
   color: white;
   font-weight: 400;
+  transition: all 0.1s ease-in;
+}
+.nav__item > a:hover {
+  background-color: rgb(255, 255, 255);
+  color: #25a379;
 }
 
 .heading {
