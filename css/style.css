@@ -42,30 +42,46 @@ Dark green: #28b485
   color: rgb(255, 255, 255);
 }
 
-.navigation__container {
-  top: 5rem;
-  right: 5rem;
+.navigation__checkbox {
+  visibility: hidden;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(55);
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  z-index: 150;
+}
+.navigation__checkbox:checked ~ .navigation__button > .button__logo-menu {
+  display: none;
+}
+.navigation__checkbox:not(:checked) ~ .navigation__button > .button__logo-close {
+  display: none;
+}
+.navigation__button {
+  top: 6rem;
+  right: 6rem;
   position: fixed;
   height: 6rem;
   width: 6rem;
   background-color: white;
   border-radius: 45px;
   z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.navigation__container__background {
-  top: 5.5rem;
-  right: 5.5rem;
+.navigation__background {
+  top: 6.5rem;
+  right: 6.5rem;
   position: fixed;
   height: 5rem;
   width: 5rem;
-  background-image: radial-gradient(#7ed56f, #25a379);
+  background-image: radial-gradient(circle, rgb(126, 213, 111) 26%, rgb(85, 197, 122) 50%, rgb(37, 163, 121) 76%);
   border-radius: 45px;
-  transform: scale(55);
+  transition: all 0.5s;
   z-index: 50;
-  visibility: hidden;
 }
-
-.nav {
+.navigation__nav {
   display: flex;
   height: 100%;
   width: 100%;
@@ -73,9 +89,9 @@ Dark green: #28b485
   position: fixed;
   align-items: center;
   justify-content: center;
-  z-index: 150;
-  visibility: hidden;
+  z-index: -50;
 }
+
 .nav__item {
   list-style: none;
   text-transform: uppercase;
@@ -95,6 +111,14 @@ Dark green: #28b485
 .nav__item > a:hover {
   background-color: rgb(255, 255, 255);
   color: #25a379;
+}
+
+.button__logo {
+  height: 50%;
+  transition: all 0.5s;
+}
+.button__logo:hover {
+  transform: scale(1.2);
 }
 
 .heading {

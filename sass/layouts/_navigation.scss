@@ -1,30 +1,50 @@
-.navigation{
-    &__container{
-        top: 5rem;
-        right: 5rem;
+.navigation {
+    &__checkbox {
+        visibility: hidden;
+    }
+
+    &__checkbox:checked~&__background {
+        transform: scale(55);
+    }
+
+    &__checkbox:checked~ &__nav {
+        z-index: 150;
+    }
+    &__checkbox:checked ~ &__button > .button__logo-menu {
+        display: none;
+    }
+    &__checkbox:not(:checked) ~ &__button > .button__logo-close {
+        display: none;
+    }
+
+
+    &__button {
+        top: 6rem;
+        right: 6rem;
         position: fixed;
         height: 6rem;
         width: 6rem;
         background-color: white;
         border-radius: 45px;
         z-index: 200;
-        &__background{
-                top: 5.5rem;
-                right: 5.5rem;
-                position: fixed;
-                height: 5rem;
-                width: 5rem;
-                background-image: radial-gradient($color-light,$color-dark);
-                border-radius: 45px;
-                transform: scale(55);
-                z-index: 50;
-                visibility: hidden;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-   
-}
-.nav{
+    &__background {
+        top: 6.5rem;
+        right: 6.5rem;
+        position: fixed;
+        height: 5rem;
+        width: 5rem;
+        background-image: radial-gradient(circle, rgba(126,213,111,1) 26%, rgba(85,197,122,1) 50%, rgba(37,163,121,1) 76%);;
+        border-radius: 45px;
+        transition: all .5s;
+        z-index: 50;
+    }
+
+&__nav {
     display: flex;
     height: 100%;
     width: 100%;
@@ -32,30 +52,43 @@
     position: fixed;
     align-items: center;
     justify-content: center;
-    z-index: 150;
-    visibility: hidden;
-    &__item{
-            list-style: none;
-            text-transform: uppercase;
-            // font-style: none;
-            text-decoration: none;
-            padding: 1rem;
-            color: white;
-            font-size: 2.4rem;
-            & > a{
-                &:link,
-                &:visited{
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    padding: 1rem;
-                    color: white;
-                    font-weight: 400;
-                    transition: all .1s ease-in;
-                }
-                &:hover{
-                    background-color: $color-white;
-                    color: $color-dark;
-                }
+    z-index: -50;
+}
+}
+
+.nav{
+    &__item {
+        list-style: none;
+        text-transform: uppercase;
+        // font-style: none;
+        text-decoration: none;
+        padding: 1rem;
+        color: white;
+        font-size: 2.4rem;
+
+        &>a {
+            &:link,
+            &:visited {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 1rem;
+                color: white;
+                font-weight: 400;
+                transition: all .1s ease-in;
             }
+
+            &:hover {
+                background-color: $color-white;
+                color: $color-dark;
+            }
+        }
+    }
+}
+
+.button__logo{
+    height: 50%;
+    transition: all .5s;
+    &:hover{
+        transform: scale(1.2);
     }
 }
