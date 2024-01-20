@@ -12,7 +12,28 @@
     <title>Natours | Exciting tours for adventurous people</title>
 </head>
 
-<body>  
+<body>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__images">
+                <img class="popup__img" src="./img/nat-8.jpg" alt="">
+                <img class="popup__img" src="./img/nat-9.jpg" alt="">
+            </div>
+            <div class="popup__info">
+                <a href="#section-tours" class="popup__close">&#10005;</a>
+                <h2 class="heading-secondary u-m-bottom-small">Book your Seat</h2>
+                <h3 class="heading-tertiary">Important- Please read these terms before booking</h3>
+
+                <p class="popup__info-detail">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam praesentium dicta perspiciatis ipsam quos accusantium repellat saepe temporibus? Nobis doloribus optio consectetur laboriosam dolorem ducimus ea porro sapiente quo a!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus voluptatibus officiis iste. Earum nam omnis impedit maiores placeat similique, enim dolore accusantium voluptatibus veritatis quos animi ipsum quas nostrum! Optio?
+                </p>
+                <a href="#" class="btn btn-primary u-m-top-medium">Book Now</a>
+            </div>
+
+        </div>
+    </div>
+    
     <div class="navigation">
         <input class="navigation__checkbox" type="checkbox" name="menu" id="menu">
         <label class="navigation__button" for="menu">
@@ -37,7 +58,7 @@
                 <span class="heading__primary__main">Outdoors</span>
                 <span class="heading__primary__sub">is where life Happens</span>
             </h1>
-            <a class="heading__btn btn btn--white btn-animation u-m-top-medium">Discover Our Tours</a>
+            <a href="#section-tours" class="heading__btn btn btn--white btn-animation u-m-top-medium">Discover Our Tours</a>
         </div>
     </header>
     <main class="main">
@@ -96,7 +117,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-text-center">
                 <h2 class="heading-secondary u-m-bottom-large">
                     Most popular tours
@@ -122,7 +143,7 @@
                             <div class="backside">
                                 <p class="backside__text">Only</p>
                                 <h4 class="backside__price u-m-top-small">250$</h4>
-                                <a href="#" class="btn btn-white u-m-top-medium">Apply Now</a>
+                                <a href="#popup" class="btn btn-white u-m-top-medium">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +165,7 @@
                             <div class="backside">
                                 <p class="backside__text">Only</p>
                                 <h4 class="backside__price u-m-top-small">350$</h4>
-                                <a href="#" class="btn btn-white u-m-top-medium">Apply Now</a>
+                                <a href="#popup" class="btn btn-white u-m-top-medium">Apply Now</a>
                             </div>
                         </div>
                     </div>
@@ -166,7 +187,7 @@
                             <div class="backside">
                                 <p class="backside__text">Only</p>
                                 <h4 class="backside__price u-m-top-small">450$</h4>
-                                <a href="#" class="btn btn-white u-m-top-medium">Apply Now</a>
+                                <a href="#popup" class="btn btn-white u-m-top-medium">Apply Now</a>
                             </div>
                         </div>
                     </div>
