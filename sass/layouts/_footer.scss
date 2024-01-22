@@ -25,8 +25,16 @@
             // background-color: white;
         }
     } 
+    @include response('phone'){
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .info__copyright{
     width: 50%;
     font-size: 1.2rem;
+    padding: 0rem 2rem;
+    @include response('phone'){
+        font-size: 1.4rem;
+    }
 }

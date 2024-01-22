@@ -1,0 +1,29 @@
+
+@mixin response($break-point) {
+
+    // @media(max-width:600px){
+    //     @content
+    // }
+    
+    @if $break-point == 'phone' {
+        @media (max-width:480px) {
+            @content
+        }
+    }
+    @if  $break-point=='tab-vert' {
+        @media(max-width:600px){
+            @content
+        }
+    }
+    @if  $break-point=='tab-hor' {
+        @media(max-width:801px){
+            @content
+        }
+    }
+    @if  $break-point=='tab-desk' {
+        @media(min-width:1025px){
+            @content
+        }
+    }
+
+}

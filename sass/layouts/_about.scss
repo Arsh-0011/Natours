@@ -2,6 +2,10 @@
     background-color: rgb(238, 238, 238);
     margin-top: -20vh;
     padding-top: 35vh;
+
+    @include response('phone'){
+        padding-top: 25vh;
+    }
 }
 .heading-secondary{
     display: inline-block;
@@ -19,14 +23,17 @@
     display: flex;
     justify-content: space-around;
     height: 95vh;
+    @include response('phone'){
+        flex-direction:column-reverse;
+        align-items: center;
+    }
 }
 .col-1-of-2{
     width: 40%;
-}
-.about{
-    :not(:first-child){
-        margin-top: 2rem;
+    @include response('phone'){
+        width: 80%;
     }
+
 }
 .heading-tertiary{
     margin-bottom: 2rem;
@@ -44,7 +51,6 @@
 }
 .composition{
     position: relative;
-
     &__photo{
         position: absolute;
         transition: all .5s;
@@ -90,6 +96,5 @@
         color: white;
     }
     :active{
-
     }
 }

@@ -7,13 +7,20 @@
     left: 0;
     z-index: -1000;
     visibility: hidden;
-    transition:  5s;
+    transition: all 1s;
+    
+
     &:target{
         visibility: visible;
         z-index: 1000;
     }
 
     padding: 5rem 10rem;
+
+    @include response('phone'){
+        padding: 3rem 4rem;
+    }
+
     &__content{
         position: relative;
         background-color: white;
@@ -21,21 +28,45 @@
         width: 100%;
         display: flex;
         text-align: center;
+
+        @include response('phone'){
+            flex-direction: column;
+            overflow-y: scroll;
+        }
     }
     &__images{
         display: flex;
         flex-direction: column;
+
+        @include response('phone'){
+            & :last-child {
+                display: none;
+            }
+        }
     }
     &__img{
         height: 50%;
+
+        @include response('phone'){
+            height: 100%;
+        }
     }
     &__info{
         flex-grow: 1;
         padding: 2rem 5rem;
+        @include response('phone'){
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+        }
 
         &-detail{
             column-count: 2;
             column-gap: 3rem;
+
+            @include response('phone'){
+                column-count: 1;
+            }
         }
     }
     &__close{
@@ -46,6 +77,11 @@
         &:link,
         &:visited{
             text-decoration: none;
+            @include response('phone'){
+                color: $color-white;
+                background-color: rgb(166, 166, 166);
+                padding: .5rem 1rem;
+            }
         }
         &:hover{
             color: $color-dark;

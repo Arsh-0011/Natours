@@ -5,6 +5,10 @@
 }
 html{
     font-size: 10px;
+
+    @include response('phone'){
+        font-size: 8px;
+    }
 }
 body{
     font-family: 'Lato',sans-serif;
@@ -12,4 +16,8 @@ body{
     line-height: 1.7;
     font-size: 1.6rem;
     padding: 3rem;
+
+    @include response('phone'){
+        padding: 1rem 3rem;
+    }
 }

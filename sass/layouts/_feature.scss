@@ -1,6 +1,13 @@
-.col-1-of-4{
+.feature-container{
+    height: 100%;
+    width: 100%;
+    padding: 15rem 10rem;
     display: flex;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-between;
     transform: skewY(5deg);
+    @include response('phone'){
+        flex-direction: column;
+        gap: 4rem;
+    }
 }

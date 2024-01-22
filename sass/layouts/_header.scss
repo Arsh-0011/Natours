@@ -22,6 +22,9 @@
             font-weight: 400;
             letter-spacing: 1.5rem;
             animation: moveInRight 1s ease-out;
+            @include response('phone'){
+                font-size: 4rem;
+            }
         }
 
         &__sub {
@@ -30,6 +33,10 @@
             letter-spacing: 1rem;
             font-weight: 700;
             animation: moveInLeft 1s ease-out;
+            @include response('phone'){
+                font-size: 2rem;
+                font-weight: 300;
+            }
         }
     }
     
@@ -45,7 +52,6 @@
     &__btn {
         background-color: $color-white;
         display: inline-block;
-
         &:hover {
             -webkit-box-shadow: .3rem 1.1rem 1.9rem 0rem rgba(0, 0, 0, 0.75);
             -moz-box-shadow: .3rem 1.1rem 1.9rem 0rem rgba(0, 0, 0, 0.75);

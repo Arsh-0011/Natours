@@ -10,19 +10,29 @@
     background-color: rgba($color-white,0.7) ;
     padding: 3rem 2rem;
     box-shadow: $standard-box-shadow;
+    text-align:center; 
+    @include response('phone'){
+        transform: skewX(-5deg);
+        flex-direction: column;
+        padding: 2rem 4rem;
+    }
     &-image{
         height: 15rem;
         clip-path: circle(39%);
-        transform: skewX(10deg);
+        transform: skewX(5deg);
         &__container{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include response('phone'){
+                margin-bottom: 4rem;
+            }
+
         }
     }
     &-text{
-        transform: skewX(10deg);
+        transform: skewX(5deg);
     }
     &-detail{
         font-size: 1.3rem;
