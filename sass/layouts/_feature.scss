@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: space-between;
     transform: skewY(5deg);
+    @include response('tab-vert'){
+        flex-direction: column;
+        gap: 4rem;
+    }
     @include response('phone'){
         flex-direction: column;
         gap: 4rem;

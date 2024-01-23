@@ -7,7 +7,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    @include response('tab-vert'){
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
     @include response('phone'){
         flex-direction: column;
         align-items: center;

@@ -20,7 +20,7 @@
             @content
         }
     }
-    @if  $break-point=='tab-desk' {
+    @if  $break-point=='desktop' {
         @media(min-width:1025px){
             @content
         }

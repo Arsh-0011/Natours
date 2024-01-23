@@ -5,7 +5,6 @@
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
     position: relative;
-
     &__primary{
         position: absolute;
         top: 40%;
@@ -15,16 +14,24 @@
         font-stretch: expanded;
         text-transform: uppercase;
         text-align: center;
-
         &__main {
             display: block;
             font-size: 6rem;
             font-weight: 400;
             letter-spacing: 1.5rem;
             animation: moveInRight 1s ease-out;
+            @include response('desktop'){
+            }
+            @include response('tab-hor'){
+            }
+            @include response('tab-vert'){
+                font-size: 5rem;
+            }
             @include response('phone'){
                 font-size: 4rem;
             }
+            
+            
         }
 
         &__sub {
@@ -33,10 +40,19 @@
             letter-spacing: 1rem;
             font-weight: 700;
             animation: moveInLeft 1s ease-out;
+            @include response('desktop'){
+            }
+            @include response('tab-hor'){
+            }
+            @include response('tab-vert'){
+                font-size: 2rem;
+                font-weight: 300;
+            }
             @include response('phone'){
                 font-size: 2rem;
                 font-weight: 300;
             }
+            
         }
     }
     
@@ -45,6 +61,12 @@
         position: absolute;
         top: 3.5rem;
         left: 4rem;
+        @include response('tab-vert'){
+           height: 4rem;
+        }
+        @include response('phone'){
+            height: 3.5rem;
+         }
     }
 
 
