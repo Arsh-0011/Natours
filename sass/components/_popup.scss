@@ -54,10 +54,13 @@
     &__info{
         flex-grow: 1;
         padding: 2rem 5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
         @include response('phone'){
             padding-top: 2rem;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         &-detail{

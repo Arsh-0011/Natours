@@ -26,9 +26,14 @@ Dark green: #28b485
 .section-tours {
   padding: 20rem;
 }
+@media (max-width: 801px) {
+  .section-tours {
+    padding: 10rem 0rem;
+  }
+}
 @media (max-width: 480px) {
   .section-tours {
-    padding: 10rem;
+    padding: 10rem 0rem;
   }
 }
 
@@ -422,6 +427,15 @@ Dark green: #28b485
   justify-content: space-between;
   transform: skewY(5deg);
 }
+@media (max-width: 801px) {
+  .feature-container {
+    padding: 15rem 2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
 @media (max-width: 600px) {
   .feature-container {
     flex-direction: column;
@@ -440,11 +454,37 @@ Dark green: #28b485
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .tours {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .tours {
+    font-size: 1.3rem;
+  }
+}
 
 .tour-row {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+@media (min-width: 1025px) {
+  .tour-row {
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 801px) {
+  .tour-row {
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 600px) {
   .tour-row {
@@ -640,19 +680,27 @@ Dark green: #28b485
   padding: 5rem 2rem;
   text-align: center;
 }
+@media (min-width: 1025px) {
+  .feature-block {
+    padding: 4rem 0.5rem;
+  }
+}
+@media (max-width: 801px) {
+  .feature-block {
+    padding: 4rem 0.5rem;
+  }
+}
 .feature-block__icon {
   height: 5rem;
 }
-
 .heading-tertiary {
   font-weight: 700;
 }
 
 .section-tour__card {
-  height: 40rem;
-  width: 25rem;
   position: relative;
   perspective: 1500;
+  height: 45rem;
 }
 .section-tour__card:hover .tour-card__front-1 {
   transform: rotateY(180deg);
@@ -672,18 +720,42 @@ Dark green: #28b485
 .section-tour__card:hover .tour-card__back-3 {
   transform: rotateY(0deg);
 }
+@media (min-width: 1025px) {
+  .section-tour__card {
+    width: 30%;
+  }
+}
+@media (max-width: 801px) {
+  .section-tour__card {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .section-tour__card {
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .section-tour__card {
+    width: 50%;
+    height: 42rem;
+  }
+}
 
 .tour-card {
-  width: 25rem;
   transition: all 1s;
-  position: absolute;
+  height: 100%;
   backface-visibility: hidden;
   -webkit-box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.35);
   box-shadow: 0px 7px 18px -11px rgba(0, 0, 0, 0.35);
 }
 .tour-card__back {
+  position: absolute;
+  top: 0;
+  left: 0;
   transform: rotateY(-180deg);
+  width: 100%;
 }
 .tour-card__back-1 {
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%);
@@ -696,9 +768,10 @@ Dark green: #28b485
 }
 .tour-card__image {
   background-size: cover;
-  height: 15rem;
+  height: 20rem;
   background-blend-mode: screen;
   -webkit-background-blend-mode: screen;
+  position: relative;
 }
 .tour-card__image-1 {
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%), url("../img/nat-5.jpg");
@@ -711,13 +784,14 @@ Dark green: #28b485
 }
 .tour-card__heading {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   padding: 0.5rem;
   color: white;
   position: absolute;
-  top: 8rem;
-  left: 10rem;
+  bottom: 0rem;
+  right: 0rem;
+  width: 50%;
 }
 .tour-card__heading-1 {
   background-image: radial-gradient(circle at 0.8% 1.8%, rgb(255, 187, 103) 0%, rgb(255, 104, 107) 90.1%);
@@ -734,7 +808,7 @@ Dark green: #28b485
   flex-direction: column;
 }
 .tour-card__details {
-  margin-top: 4rem;
+  margin: 2rem 0rem;
   text-decoration: none;
   text-align: center;
   width: 70%;
@@ -745,6 +819,18 @@ Dark green: #28b485
 }
 .tour-card__details :not(:last-child) {
   border-bottom: solid 0.1px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 600px) {
+  .tour-card {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+@media (max-width: 480px) {
+  .tour-card {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
 }
 
 .backside {
@@ -909,12 +995,15 @@ Dark green: #28b485
 .popup__info {
   flex-grow: 1;
   padding: 2rem 5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 @media (max-width: 480px) {
   .popup__info {
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 }
 .popup__info-detail {

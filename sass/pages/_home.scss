@@ -22,8 +22,11 @@
 
 .section-tours{
     padding: 20rem;
+    @include response('tab-hor'){
+        padding: 10rem 0rem;
+    }
     @include response('phone'){
-        padding: 10rem;
+        padding: 10rem 0rem;
     }
 }
 

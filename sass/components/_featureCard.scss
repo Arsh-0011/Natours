@@ -8,9 +8,17 @@
     padding: 5rem 2rem;
     text-align: center;
     // transform: skewY(5deg);
-    
+    @include response('desktop'){
+        padding: 4rem .5rem;
+    }
+    @include response('tab-hor'){
+        padding: 4rem .5rem;
+    }
     &__icon{
-       height: 5rem;
+        height: 5rem;
+        @include response('tab-hor'){
+            // height: 3rem;
+        }
     }
 }
 .heading-tertiary{
