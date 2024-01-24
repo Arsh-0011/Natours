@@ -133,6 +133,14 @@ Dark green: #28b485
   justify-content: center;
   z-index: -50;
 }
+@media (max-width: 801px) {
+  .navigation__nav {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+}
 @media (max-width: 600px) {
   .navigation__nav {
     height: 100vh;
